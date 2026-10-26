@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Explora Dispositivo",
+    "slug": "explora-dispositivo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.estudiante.exploradispositivo",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "La cámara sirve para tomar fotos y leer códigos QR.",
+        "NSLocationWhenInUseUsageDescription": "La ubicación se usa para mostrar tus coordenadas actuales.",
+        "NSFaceIDUsageDescription": "La biometría permite probar la autenticación del dispositivo."
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite usar la cámara para fotos y códigos QR.",
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permite mostrar tu ubicación mientras usas la app."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permite probar la autenticación biométrica."
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0aea0fdf-ec04-46ac-8d8e-bdc3cde96823"
+      }
+    },
+    "owner": "antonella_l0"
+  }
+}
